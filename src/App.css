@@ -1,0 +1,65 @@
+.container {
+    min-height: 100vh; /*esto inidica la altura minima, en este caso Esto asegura 
+    que el elemento tenga al menos la misma altura que la ventana del navegador, 100% */
+    background-position: center center; /*se utiliza para posicionar la imagen de fondo 
+    en el centro tanto horizontal como verticalmente dentro del elemento al que se aplica.*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em; /* GAP: solo funciona con flexbox y grid se utiliza para definir el espacio entre las filas y 
+    columnas de elementos en un diseño basado en cuadrícula, ya sea utilizando Flexbox o Grid Layout.*/    
+}
+
+.container__title {
+    text-shadow: 0.15em 0.15em #9999; /*sirve para poner una sombra al texto*/
+    font-size: 3rem;
+}
+  
+
+.container__phrase{
+    width: 100%;
+    max-width: 30em;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1.5em 2em;
+    line-height: 1.4; /*separa las lineas de los parrafos*/
+    border-radius: 0.7em;
+    font-size: 1.5em;
+}
+
+
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .container__phrase {
+    /* ... tus estilos existentes ... */
+    animation: slideInFromLeft 0.5s forwards; /* Agrega la animación al contenedor */
+  }
+.container__btn {
+    padding: 0.8em 1.2em;
+    border-radius: 0.7em;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    background: #53b18599;
+    cursor: pointer;
+    transition: opacity 200ms ease,
+                transform 200ms ease,
+                box-shadow 200ms ease;
+}
+
+.container__btn:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 0.3em #53b18599;
+    
+}
+
+
+
